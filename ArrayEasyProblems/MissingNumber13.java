@@ -1,0 +1,21 @@
+package ArrayEasyProblems;
+
+public class MissingNumber13 {
+    public static int Missing(int[] nums){
+        int n=nums.length;
+        int[] hash=new int[n+1];
+         for(int i=0;i<n;i++){
+            hash[nums[i]]=1;
+         }
+         for(int i=0;i<n+1;i++){
+            if(hash[i]==0){
+                return i;
+            }
+         }
+         return -1;
+    }
+    public static void main(String[] args) {
+        int[] nums={0,1,2,4};
+        System.out.println(Missing(nums));
+    }
+}

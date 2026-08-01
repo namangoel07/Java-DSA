@@ -1,0 +1,17 @@
+package Recursion;
+
+public class CheckPalindromeString9 {
+    public static boolean isPalindrome(String s){
+        s=s.toLowerCase().replaceAll("[^a-z0-9]", "");
+        for(int i=0;i<s.length()/2;i++){
+            if(s.charAt(i)!=s.charAt(s.length()-i-1)){
+                return false;
+            }
+        }
+        return true;
+    }
+    public static void main(String[] args) {
+        String s="A man, is walking: hello";
+        System.out.println(isPalindrome(s));
+    }
+}
