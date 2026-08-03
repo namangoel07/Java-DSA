@@ -10,7 +10,7 @@ public class RearrangeArray14 {
             if(nums[i]>0){
                 ans[pos]=nums[i];
                 pos+=2;
-            }
+            } 
             else{
                 ans[neg]=nums[i];
                 neg+=2;
