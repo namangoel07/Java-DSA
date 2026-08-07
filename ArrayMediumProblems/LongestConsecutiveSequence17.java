@@ -5,7 +5,7 @@ import java.util.Arrays;
 public class LongestConsecutiveSequence17 {
     public static int longest(int[] nums){
         int n=nums.length;
-        Arrays.sort(nums);
+        
         int longest=1;
 
       for(int i=0;i<n;i++){
