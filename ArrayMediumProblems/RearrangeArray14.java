@@ -7,11 +7,13 @@ public class RearrangeArray14 {
         int pos=0;
         int neg=1;
         for(int i=0;i<n;i++){
-            if(nums[i]>0){
+            if(nums[i]>0)
+            {
                 ans[pos]=nums[i];
                 pos+=2;
             } 
-            else{
+            else
+            {
                 ans[neg]=nums[i];
                 neg+=2;
             }
