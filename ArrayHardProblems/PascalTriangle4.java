@@ -4,11 +4,12 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class PascalTriangle4 {
-    public static List<Integer> pascal(int n){
+    public static List<Integer> pascal(int i){
         ArrayList<Integer> list=new ArrayList<>();
         long ans=1;
-        for(int col=1;col<n;col++){
-            ans=ans*(n-col);
+        list.add((int)ans);
+        for(int col=1;col<i;col++){
+            ans=ans*(i-col);
             ans=ans/col;
             list.add((int)ans);
         }
@@ -17,13 +18,16 @@ public class PascalTriangle4 {
     public static ArrayList<ArrayList<Integer>> pascaltrian(int n){
         ArrayList<ArrayList<Integer>> ans=new ArrayList<>();
         for(int i=1;i<=n;i++){
-            ArrayList<Integer> ansrow=pascal(i);
+            ArrayList<Integer> ansrow=(ArrayList<Integer>) pascal(i);
             ans.add(ansrow);
         }
         return ans;
     }
     public static void main(String[] args) {
         int n=5;
-        pascal(n);
+        ArrayList<ArrayList<Integer>> result=pascaltrian(n);
+        for(ArrayList<Integer> row:result){
+            System.out.println(row);
+        }
     }
 }
